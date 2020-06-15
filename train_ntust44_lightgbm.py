@@ -180,7 +180,7 @@ def main():
         fscore_list.append(fscore)
         
         ax = lightgbm.plot_importance(gbm, max_num_features=15, figsize=(12,12))
-        file_path = lightgbm_importance_name + "_" + str(i) + ".png"
+        file_path = lightgbm_importance_name + "_split_" + str(i) + ".png"
         plt.savefig(file_path)
         feature_importance_list.append(gbm.feature_importance())
 
